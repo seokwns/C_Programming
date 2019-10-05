@@ -1,10 +1,16 @@
 int GCD(int a, int b) {
-	int start = (a > b) ? b : a;
-	int i;
+	int tmp, n;
 
-	for (i = start; i > 0; i--) {
-		if (a % i == 0 && b % i == 0) return i;
+	if (a < b) {
+		tmp = a;
+		a = b;
+		b = tmp;
 	}
 
-	return 1;
+	while (b != 0) {
+		n = a % b;
+		a = b;
+		b = n;
+	}
+	return a;
 }
