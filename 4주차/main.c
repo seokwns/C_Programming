@@ -5,16 +5,12 @@
 
 
 int main(void) {
-	
-	int a, b;
+	hanoi_tower(3, 1, 3, 2);
+	int** path = getPath();
+	int i;
 
-	printf("Enter number a : ");
-	scanf_s("%d", &a);
-	printf("Enter number b : ");
-	scanf_s("%d", &b);
-
-	printf("GCD of %d and %d : %d\n", a, b, GCD(a, b));
-	printf("LCM of %d and %d : %d\n", a, b, LCM(a, b));
-	
+	for (i = 0; i < 8; i++) {
+		printf("%d : %d -> %d\n", i + 1, path[i][0], path[i][1]);
+	}
 	return 0;
 }
