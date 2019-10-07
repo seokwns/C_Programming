@@ -5,12 +5,18 @@
 
 
 int main(void) {
-	hanoi_tower(3, 1, 3, 2);
-	int** path = getPath();
-	int i;
+	int** path;
+	int i, n;
 
-	for (i = 0; i < 8; i++) {
+	printf("하노이탑 원반 개수 : ");
+	scanf("%d", &n);
+	hanoi_tower(n, 1, 3, 2);
+	path = getPath();
+
+	for (i = 0; i < getLength(); i++) {
 		printf("%d : %d -> %d\n", i + 1, path[i][0], path[i][1]);
 	}
+	_free();
+	
 	return 0;
 }
