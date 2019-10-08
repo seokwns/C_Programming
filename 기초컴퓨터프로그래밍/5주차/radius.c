@@ -3,14 +3,14 @@
 
 int main(void) {
     float radius;
-    printf("¹İÁö¸§ : ");
+    printf("ë°˜ì§€ë¦„ : ");
     scanf("%f", &radius);
 
     float A = 4 * PI * radius * radius;
     float V = (4.0/3) * PI * radius * radius * radius;
 
-    printf("Ç¥¸éÀû : %f\n", A);
-    printf("ºÎÇÇ : %f", V);
+    printf("í‘œë©´ì  : %f\n", A);
+    printf("ë¶€í”¼ : %f", V);
 
     return 0;
 }
