@@ -15,7 +15,7 @@ void init(void) { //에라토스테네스의 채를 이용하여 MAX_NUM까지의 숫자들의 소수 �
     	}
 	}
 }
-//LG GRAM 17 i7 최고성능 기준 최대 19ms의 속도를 보임.
+//LG GRAM 17 i7 최고성능 기준 최대 19ms, 평균 20~23ms의 속도를 보임.
 
 int is_prime(int n) {
 	if(n == 1) {
