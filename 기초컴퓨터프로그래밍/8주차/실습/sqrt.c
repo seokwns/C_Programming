@@ -29,3 +29,32 @@ int main() {
 	
 	return 0;
 }
+
+
+/*
+int main() {
+	double x = 123456;
+	double epsilon = 0.01;
+	double step = epsilon * epsilon;
+	double ans = x;
+	int numGuesses = 0;
+	
+	double diff = my_abs(ans * ans - x);
+	
+	while (diff > epsilon && ans <= x) {
+		ans = ans - step; //+= 0.0001
+		diff = my_abs(ans * ans - x); //a^2 - x
+		numGuesses = numGuesses + 1;
+	}
+	ans = my_abs(ans);
+	
+	printf("# of Guesses = %d\n", numGuesses);
+	
+	if (diff > epsilon)
+		printf("Failed on square root of %f\n", x);
+	else
+		printf("%.20f is close to square root of %f", ans, x);
+	
+	return 0;
+}
+*/
