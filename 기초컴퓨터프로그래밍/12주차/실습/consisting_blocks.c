@@ -23,9 +23,6 @@ int F(int k, int n) {
     int solutions = 1; //BLACK k, RED 0 
     int x, y;
 
-    if (k == n) return 2;
-    if (k < n) return 1;
-
     for (x = 0; x <= k - n; x++) {
         for (y = k - (x + n); y >= 0; y--) {
             solutions += F(y - 1, n);
