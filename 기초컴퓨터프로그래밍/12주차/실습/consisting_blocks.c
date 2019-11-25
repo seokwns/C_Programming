@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int F(int n, int k);
+int F(int k, int n);
 
 int main(void) {
     int k;
