@@ -18,7 +18,7 @@ int main(void) {
     printf("after (n = %d) day : %s\n", n, weekday[(now -> tm_wday + n) % 7]);
 
     int mm, dd, yyyy;
-    printf("날짜 입력 : ");
+    printf("Input date(mm/dd/yyyy) : ");
     scanf("%d/%d/%d", &mm, &dd, &yyyy);
 
     time(&set_t);
