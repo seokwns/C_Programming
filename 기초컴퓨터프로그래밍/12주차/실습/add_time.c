@@ -22,7 +22,7 @@ int main(void) {
     printf("after (n = %d) day : %s\n", n, weekday[now -> tm_wday]);
     
     now_t -= n * DAYSEC;
-	now = localtime(&now_t);
+    now = localtime(&now_t);
 
     int mm, dd, yyyy;
     printf("Input date(mm/dd/yyyy) : ");
