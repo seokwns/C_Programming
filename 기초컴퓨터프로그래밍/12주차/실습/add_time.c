@@ -20,6 +20,9 @@ int main(void) {
     now = localtime(&now_t);
     printf("after (n = %d) date : %d / %d / %d\n", n, now -> tm_mon + 1, now -> tm_mday, now -> tm_year + 1900);
     printf("after (n = %d) day : %s\n", n, weekday[now -> tm_wday]);
+    
+    now_t -= n * DAYSEC;
+	now = localtime(&now_t);
 
     int mm, dd, yyyy;
     printf("Input date(mm/dd/yyyy) : ");
