@@ -26,19 +26,19 @@ ttriangle * new_triangle(double ax, double ay, double bx, double by, double cx, 
 	for (i = 0; i < 3; i++) p -> point_[i] = points[i];
 
 	double angles[3];
-	double A, B, C;
+	double dA, dB, dC;
 
-	A = sqrt( pow(bx - cx, 2) + pow(by - cy, 2) );
-	B = sqrt( pow(ax - cx, 2) + pow(ay - cy, 2) );
-	C = sqrt( pow(ax - bx, 2) + pow(ay - by, 2) );
+	dA = sqrt( pow(bx - cx, 2) + pow(by - cy, 2) );
+	dB = sqrt( pow(ax - cx, 2) + pow(ay - cy, 2) );
+	dC = sqrt( pow(ax - bx, 2) + pow(ay - by, 2) );
 
-	angles[0] = acos((pow(B, 2) + pow(C, 2) - pow(A, 2)) / (2 * B * C));//A
-	angles[1] = acos((pow(A, 2) + pow(C, 2) - pow(B, 2)) / (2 * A * C));//B
-	angles[2] = acos((pow(A, 2) + pow(B, 2) - pow(C, 2)) / (2 * A * B));//C
+	angles[A] = acos((pow(dB, 2) + pow(dC, 2) - pow(dA, 2)) / (2 * dB * dC));//A
+	angles[B] = acos((pow(dA, 2) + pow(dC, 2) - pow(dB, 2)) / (2 * dA * dC));//B
+	angles[C] = acos((pow(dA, 2) + pow(dB, 2) - pow(dC, 2)) / (2 * dA * dB));//C
 
 	for (i = 0; i < 3; i++) p -> angle_[i] = angles[i];
 
-	p -> area = A * B * sin(angles[2]) / 2.0;
+	p -> area = dA * dB * sin(angles[C]) / 2.0;
 
     return p;
 }
