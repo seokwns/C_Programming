@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 #define MIN -10000
 #define MAX 10000
@@ -35,6 +36,8 @@ int checkCirclePoint(CircleData p1, CircleData p2);
 
 
 int main(void) {
+    int start_time, end_time;
+    float time;
     int TestCase = -1, i;
 
     while (TestCase <= 0) {
@@ -47,6 +50,8 @@ int main(void) {
 
     CircleData** cases = getCase(TestCase);
     int result;
+
+    start_time = clock();
 
     for (i = 0; i < TestCase; i++) {
         int DIS = getDistance(cases[i][0], cases[i][1]);
@@ -79,6 +84,11 @@ int main(void) {
 
         printf("[Case %d] %d\n", i + 1, result);
     }
+
+    end_time = clock();
+
+    time = (float)(end_time - start_time) / CLOCKS_PER_SEC;
+    printf("\n\n걸린시간 : %f\n", time);
 
     return 0;
 }
